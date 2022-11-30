@@ -2,43 +2,217 @@
 import WebUnderConstructionLayout from '../layouts/WebUnderConstructionLayout.astro';
 ---
 
-<WebUnderConstructionLayout title="Web under construction">
-	<div class="main-text">
-		<h1>Diego García Miño's portfolio is</h1>
-		<h2>Under construction</h2>
+<WebUnderConstructionLayout title="Diego García Miño - Web en construcción">
+	<div class="bg-container">
+		<div class="main-text">
+			<div class="title">
+				<hr class="long-line">
+				<h1>PORTFOLIO DE DIEGO GARCÍA MIÑO</h1>
+				<hr class="long-line">
+			</div>
+			<h2>EN CONSTRUCCIÓN</h2>
+			<div class="w3-grey w3-round-xlarge">
+				<div class="w3-container w3-white w3-round-xlarge progress-bar-style"></div>
+			  </div>
+			<div class="links">
+				<a href="https://github.com/diegogmino" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-bounce-hover icon-margin-right"></i></a>
+				<a href="https://www.linkedin.com/in/diego-garc%C3%ADa-miño-8429771a7/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-bounce-hover icon-margin-left"></i></a>
+			</div>
+		</div>
 	</div>
 </WebUnderConstructionLayout>
 
 <style>
 	
-	h1 {
-	font-size: 1.5rem;
-		font-weight: 800;
+	@font-face {
+  		font-family: rounded-elegance;
+  		src: url('/rounded-elegance.ttf');
+	}
+
+	/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) {
+
+		h1 {
+			font-size: 0.4rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+		.fa-github, .fa-linkedin {
+			font-size: 35px !important;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+	}
+
+	/* Small devices (portrait tablets and large phones, 600px and up) */
+	@media only screen and (min-width: 600px) {
+
+		h1 {
+			font-size: 0.7rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+
+		h2 {
+			font-size: 3rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+		.fa-github, .fa-linkedin {
+			font-size: 45px !important;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 35px;
+		}
+
+	}
+
+	/* Medium devices (landscape tablets, 768px and up) */
+	@media only screen and (min-width: 768px) {
+
+		h1 {
+			font-size: 1rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+
+		h2 {
+			font-size: 4rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+		.fa-github, .fa-linkedin {
+			font-size: 55px !important;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 35px;
+		}
+
+	} 
+
+	/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {
+
+		h1 {
+			font-size: 1.5rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+
+		h2 {
+			font-size: 6rem;
+			font-weight: 800;
+			font-family: rounded-elegance;
+		}
+
+		.fa-github, .fa-linkedin {
+			font-size: 60px !important;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 35px;
+		}
+
 	}
 
 
-	h2 {
-		font-size: 3rem;
-		font-weight: 800;
+	.bg-container {
+  		background-image: url('/images/background-image.png');
+		background-size:cover;
+  		background-repeat:no-repeat;
+  		background-position:center center;
+  		width:100%;
+  		height:100%; 
+  		box-sizing:border-box; 	
+
 	}
 	
+	.main-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	}
 
-.background-image {
-	width: 100%;
-}
+	.bar {
+		margin-top: 20px;
+	}
 
-.container {
-	display: flex;
-	width: 100%;
-}
+	.progress-bar-style {
+		height:24px;
+		width:5%; /* progress bar percentage */
+	}
 
-.main-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
+	.title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.long-line {
+		height:3px;
+		border-width:0;
+		color:white;
+		background-color:white;
+		width:7%;
+		margin: 20px;
+	}
+
+	.fa-github:hover, .fa-linkedin:hover {
+    	opacity: 0.5;
+	}
+
+	.fa-bounce-hover:hover {
+  		-webkit-animation: fa-bounce 1s;
+  		-moz-animation: fa-bounce 1s;
+  		-o-animation: fa-bounce 1s;
+  		animation: fa-bounce 1s;
+	}
+
+	.icon-margin-right {
+		margin-right: 15px;
+	}
+
+	.icon-margin-left {
+		margin-left: 15px;
+	}
+
 
 </style>
